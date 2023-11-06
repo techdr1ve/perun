@@ -42,25 +42,20 @@
 
 
 ?>
-	
 	<h1 style="color:#780000;">Installation of FE Webpage & SQL Database Manipulation</h1>
 
 		<br> Click the two buttons below in succession to Install Full Stats DB and FE Webpage elements, then Update<br>
-		(Note: WAIT for confirmation of each before clicking the next button)<br>
-
-
-	
+		(Note1: WAIT for confirmation of each before clicking the next button)<br>
+		(Note2: Don't worry about any errors that show up at the bottom ... likely no DCS data has been populated yet!)<br>
 <?php
 	
 
 ?>
-
 	<form method="post">		
 
 		<br><br>					
 		<input type="submit" name="button1"
 				value="1. INSTALL: ADD RANKS & MEDALS REFERENCE DATA"/>				
-			
 	</form>
 
 	<form method="post">		
