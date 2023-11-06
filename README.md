@@ -37,7 +37,7 @@ Core:
 ## Create mySQL Database (if you do not already have one)
 * Simplest, most integrated way is download latest version of [XAMPP](https://www.apachefriends.org/download.html)
 * Then head over to the perun [Discord](https://discord.gg/MTahREx) and in 'general' section and search for 'How to get mySQL & PHP Server Running' for instructions and troubleshooting
-* Once you have read the above instructions and gotten mySQL and the FE webpage to work ... then do the following
+* Once you have read the above instructions and gotten mySQL and the FE webpage to work pst config and turning on both the mySQL DB server and Apache(FrontEnd Webhost server)... then do the following
 * Copy over the [HERE](/05_Misc/05_PHP_Example/fullstatsdcswebpagephp) folder to your C:\xampp\htdocs directory ... note this folder name will be called
 * Make sure the new SQL DB is linked up with the myPHPAdmin page DB
 * Use .htaccess only if you want to lock your webpage up with at password
