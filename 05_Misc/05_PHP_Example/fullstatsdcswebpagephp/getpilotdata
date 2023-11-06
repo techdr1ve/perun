@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {text-align: left;}
+</style>
+</head>
+<body>
+
+<?php
+require "config.inc.php"; // trying to make this an include
+$mysqli = new mysqli($config_db_host, $config_db_username, $config_db_password, $config_db_database);
+if($mysqli->connect_error) {
+  exit('Could not connect');
+}
+
+$sql = "
+		SELECT 
+		a.pe_dataplayers_id,
+		b.`pe_LogEvent_missionhash_id`,		
+		a.pe_dataplayers_lastname,
+		a.pe_dataplayers_updated, 
+		COUNT(b.`pe_LogEvent_kills_armor`) AS value_count_kills_armor
+
+		FROM pe_dataplayers AS a
+		INNER JOIN pe_LogEvent AS b
+		ON a.pe_DataPlayers_id = b.pe_LogEvent_pilotid 	
+		
+		WHERE a.pe_dataplayers_lastname = ?
+
+";
+
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("s", $_GET['z']);
+$stmt->execute();
+$stmt->store_result();
+//$row = new stdClass();
+$stmt->bind_result($pid, $mhashid, $pname, $pdate, $karmor);
+$stmt->fetch();
+$stmt->close();
+
+
+		
+		
+echo "<table>";
+  echo "<tr>";
+  echo "<th>PlayerID</th>";
+  echo "<td>" . $pid->pe_dataplayers_id . "</td>";
+  echo "<th>MissionHash</th>";
+  echo "<td>" . $mhashid->pe_LogEvent_missionhash_id . "</td>";  
+  echo "<th>Pilot</th>";
+  echo "<td>" . $pname->pe_dataplayers_lastname . "</td>";
+  echo "<th>Time Last Played</th>";
+  echo "<td>" . $pdate->pe_dataplayers_updated . "</td>";   
+  echo "<th>Armor Kills</th>";
+  echo "<td>" . $karmor->value_count_kills_armor . "</td>"; 
+  //echo "<td>" . $row['Job'] . "</td>";
+  echo "</tr>";
+echo "</table>";
+
+
+?>
+
+

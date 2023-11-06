@@ -1,0 +1,4 @@
+AuthName "authorized user"
+AuthType Basic
+AuthUserFile c:/passwordfolder/.htpasswd
+Require valid-user
