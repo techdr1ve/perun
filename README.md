@@ -34,6 +34,15 @@ Core:
 * Create MySQL database using SQL script located in [04_MySQL](https://github.com/szporwolik/perun/tree/master/04_MySQL); note that you need just a one database per DCS server machine - multiple instances pushing data to the one database are supported
 * Ensure that your MySQL config is not using STRICT_TRANS_TABLES 
 
+## Create mySQL Database (if you do not already have one)
+* Simplest, most integrated way is download latest version of [XAMPP](https://www.apachefriends.org/download.html)
+* Then head over to the perun [Discord](https://discord.gg/MTahREx) and in 'general' section and search for 'How to get mySQL & PHP Server Running' for instructions and troubleshooting
+* Once you have read the above instructions and gotten mySQL and the FE webpage to work ... then do the following
+* Copy over the [HERE](/05_Misc/05_PHP_Example/fullstatsdcswebpagephp) folder to your C:\xampp\htdocs directory ... note this folder name will be called
+* Make sure the new SQL DB is linked up with the myPHPAdmin page DB
+* Use .htaccess only if you want to lock your webpage up with at password
+* Once all connected up with perun check the webpage from in your browser localhost/fullstatsdcswebpagephp ... or whatever your db and webpage are named
+
 ## Running
 * Start DCS World and host multiplayer session
   * by default the TCP port 48621 is in use as target port - ensure that port and instance ID in the options sections of the Lua file matches data 
@@ -122,14 +131,14 @@ DCS API does not track carrier or FARP operations natively, so there is a trick 
 * [Notepad++](https://notepad-plus-plus.org/)
 
 ## Contributing
-Please contact me if you'd like to contribute. Short rule is that all pull request shall come to "dev" branch, pull requests to "master" will be deleted.
+Original author is long gone a couple years ago, contact me by making and issue or make a new branch to this update and i'll merge it.
 
 ## Versioning
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/szporwolik/perun/tags). 
 
 ## Authors
 * **Szymon Porwolik** - *Initial work* - [szporwolik](https://github.com/szporwolik)
-
+* **Dr. No** - *Finalized Webpage Stats Work* - [techdr1ve](https://github.com/techdr1ve)
 See also the list of [contributors](https://github.com/szporwolik/perun/contributors) who participated in this project.
 
 ## License
