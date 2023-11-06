@@ -3,7 +3,7 @@ local PerunConfig = {}
 
 -- ###################### SETTINGS - DO NOT MODIFY OUTSIDE THIS SECTION #############################
 -- Connection
-PerunConfig.TCPPerunHost = "localhost"														    -- (string) [default: "localhost"] IP adress of the Perun instance or "localhost"
+PerunConfig.TCPPerunHost = "127.0.0.1"														    -- (string) [default: "localhost"] IP adress of the Perun instance or "localhost"
 PerunConfig.TCPTargetPort = 48621																-- (int) [default: 48621] TCP port to send data to
 PerunConfig.Instance = 1																	    -- (int) [default: 1] Id number of instance (if multiple DCS instances are to run at the same PC)
 PerunConfig.RefreshStatus = 60																    -- (int) [default: 60] Base refresh rate in seconds to send status update

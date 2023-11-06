@@ -26,7 +26,7 @@ Perun.ConnectionError = PerunConfig.ConnectionError_L1
 Perun.BroadcastPerunErrors = PerunConfig.BroadcastPerunErrors
 
 -- Variable init
-Perun.Version = "v0.12.1"
+Perun.Version = "v0.12.0"
 
 Perun.StatusData = {}
 Perun.SlotsData = {}
@@ -176,7 +176,7 @@ Perun.GetMulticrewCrew = function (owner_playerID)
 
 	local _crew = {}
 	table.insert(_crew, owner_playerID)
-	if _master_type == "F-14B" or _master_type == "Yak-52" or _master_type == "L-39C" or _master_type == "SA342M" or _master_type =="SA342Minigun" or _master_type == "SA342Mistral" or _master_type == "SA342L" or _master_type == "F-14A-135-GR" or _master_type == "C-101EB" or _master_type == "UH-1H" or _master_type == "C-101CC" then -- TBD add additional multicrew model types
+	if _master_type == "F-14B" or _master_type == "Yak-52" or _master_type == "Hercules" or _master_type == "L-39C" or _master_type == "SA342M" or _master_type =="SA342Minigun" or _master_type == "SA342Mistral" or _master_type == "SA342L" or _master_type == "F-14A-135-GR" or _master_type == "C-101EB" or _master_type == "UH-1H" or _master_type == "C-101CC" or _master_type == "AH-64D_BLK_II" or _master_type == "Mi-24P" or _master_type == "Mosquito FB Mk. VI" then -- TBD add additional multicrew model types
 		local _owner_side=net.get_player_info(owner_playerID, 'side')
 		
 		if _master_slot and _master_slot ~= "" then
