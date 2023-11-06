@@ -41,7 +41,14 @@ Core:
 * Copy over the [HERE](/05_Misc/05_PHP_Example/fullstatsdcswebpagephp) folder to your C:\xampp\htdocs directory ... note this folder name will be called
 * Make sure the new SQL DB is linked up with the myPHPAdmin page DB
 * Use .htaccess only if you want to lock your webpage up with at password
-* Once all connected up with perun check the webpage from in your browser localhost/fullstatsdcswebpagephp ... or whatever your db and webpage are named
+* Edit [config.inc.php](/05_Misc/05_PHP_Example/fullstatsdcswebpagephp/config.inc.php) with user/pass/database_name
+* Once all connected up with perun check the webpage from in your web browser localhost/fullstatsdcswebpagephp ... or whatever your db and webpage are named, webpage should show up
+* Next goto localhost/fullstatsdcswebpagephp/install.php and hit the install button
+* Next go back to localhost/fullstatsdcswebpagephp/ and hit the 'update' button in the upper-right-hand-corner
+* Should be all set to accumulate full dcs stats
+* Admin Controls: localhost/fullstatsdcswebpagephp/admin.php page for some admin controls (can adjust pwd by using a new .htaccess for this page if needed)
+* Reset Controls: localhost/fullstatsdcswebpagephp/ and Hit reset in top right hand corner and anyone with more than 30 deaths is up for stats reset for their name
+
 
 ## Running
 * Start DCS World and host multiplayer session
