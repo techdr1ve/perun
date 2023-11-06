@@ -9,7 +9,7 @@ package.path  = package.path..";"..lfs.currentdir().."/LuaSocket/?.lua"..";"..lf
 package.cpath = package.cpath..";"..lfs.currentdir().."/LuaSocket/?.dll"
 
 -- Load Dlls
-package.cpath = package.cpath..';'.. lfs.writedir()..'/Mods/services/Perun/bin/' ..'?.dll;'
+package.cpath = package.cpath..';'.. lfs.writedir()..'/Mods/services/Perun/dll/' ..'?.dll;'
 Perun.DLL = require('perun') 
 
 -- Load config file
