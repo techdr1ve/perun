@@ -43,7 +43,7 @@ Core:
 * Use .htaccess only if you want to lock your webpage up with at password
 * Edit [config.inc.php](/05_Misc/05_PHP_Example/fullstatsdcswebpagephp/config.inc.php) with user/pass/database_name
 * Once all connected up with perun check the webpage from in your web browser localhost/fullstatsdcswebpagephp ... or whatever your db and webpage are named, webpage should show up
-* Next goto localhost/fullstatsdcswebpagephp/install.php and hit the install button
+* Next goto localhost/fullstatsdcswebpagephp/install.php and hit the button 1 (wait for completion prompt to finish), then click button 2 (wait for completion prompt to finish). New full webpage stats are completed.
 * Next go back to localhost/fullstatsdcswebpagephp/ and hit the 'update' button in the upper-right-hand-corner
 * Should be all set to accumulate full dcs stats
 * Admin Controls: localhost/fullstatsdcswebpagephp/admin.php page for some admin controls (can adjust pwd by using a new .htaccess for this page if needed)
