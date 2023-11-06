@@ -9,9 +9,7 @@
 	?>
 	</style>
 
-	<?php
-	require "header.inc.php"; // include header 
-	?>
+
 
   </head>
   
@@ -42,13 +40,15 @@
 			// Make Updates to columns in the database first before querying ... started with Hardcore/Realistic and now encompasses everything
 			//require "updates.inc.php";
 
-			// Current Time + Mission + Map
-
-			require "missionstatus.inc.php"; // include header
 
 ?>
 	
-	<h1 style="color:#780000;">SQL Database Manipulation</h1>
+	<h1 style="color:#780000;">Installation of FE Webpage & SQL Database Manipulation</h1>
+
+		<br> Click the two buttons below in succession to Install Full Stats DB and FE Webpage elements, then Update<br>
+		(Note: WAIT for confirmation of each before clicking the next button)<br>
+
+
 	
 <?php
 	
@@ -59,9 +59,40 @@
 
 		<br><br>					
 		<input type="submit" name="button1"
-				value="ADD RANKS & MEDALS REFERENCE DATA"/>				
+				value="1. INSTALL: ADD RANKS & MEDALS REFERENCE DATA"/>				
 			
 	</form>
+
+	<form method="post">		
+
+		<br><br>					
+		<input type="submit" name="button8"
+				value="2. UPDATE: SQL DATA"/>				
+			
+	</form>
+
+<?php
+
+			
+		if(isset($_POST['button8'])) {
+
+
+			////////////////////////////////////////////////////////////////////////////////////
+			/////////////////UPDATE DATA BUTTON///////
+			////////////////////////////////////////////////////////////////////////////////////
+
+			// Make Updates to columns in the database first before querying ... started with Hardcore/Realistic and now encompasses everything
+			require "updates.inc.php";
+
+			///////////////////END PILOT ID DELETION/////////////////////
+
+			echo "<h1 style='color:black;font-size:14px;'>DATA HAS BEEN <u><i>UPDATED.</u></i></h1>";
+
+		}
+
+
+				
+	?>
 
 <?php
 
